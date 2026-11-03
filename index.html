@@ -32,8 +32,20 @@
     .research-list > li:last-child { padding-bottom:0; }
     .research-list h3 { margin:0 0 12px; font-size:24px; line-height:1.35; color:var(--link); font-weight:700; }
     .research-list p { margin:0 0 18px; }
-    .research-comparison { margin:14px 0 20px; }
-    .research-comparison video { display:block; width:100%; height:auto; }
+    .research-figure,
+    .research-comparison { width:100%; max-width:640px; margin:14px auto 22px; }
+    .research-figure a { display:block; }
+    .research-figure img,
+    .research-comparison video {
+      display:block;
+      width:100%;
+      height:auto;
+      aspect-ratio:16 / 9;
+      object-fit:contain;
+      background:#fafafa;
+    }
+    .featured-links { padding-left:22px; margin:0; }
+    .featured-links li + li { margin-top:10px; }
     .research-comparison figcaption { margin-top:8px; color:var(--muted); font-size:16px; }
     .section-heading { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:18px; flex-wrap:wrap; }
     .section-heading h2 { margin:0; }
@@ -69,8 +81,6 @@
       .paper { break-inside:avoid; }
       a { color:black; }
     }
-      .research-figure { margin: 0 0 22px; }
-    .research-figure img { display: block; width: 100%; height: auto; }
   </style>
 </head>
 <body>
@@ -168,6 +178,16 @@
 
 
 
+  <!-- FEATURED ARTICLES -->
+  <section class="content-section" id="featured" aria-labelledby="featured-heading">
+    <h2 id="featured-heading">Featured in</h2>
+    <p>U.S. Department of Energy features on my participation in the Geothermal INTERN program.</p>
+    <ul class="featured-links">
+      <li><a href="https://www.energy.gov/hgeo/geothermal/articles/where-great-minds-meet-fostering-geothermal-workforce" target="_blank" rel="noopener">Where Great Minds Meet: Fostering the Geothermal Workforce</a><br><span class="small muted">Geothermal Technologies Office · October 15, 2024</span></li>
+      <li><a href="https://www.energy.gov/doe-stem/articles/where-great-minds-meet-fostering-geothermal-workforce" target="_blank" rel="noopener">Where Great Minds Meet: Fostering the Geothermal Workforce — Seungmin Lee</a><br><span class="small muted">DOE STEM · October 15, 2024</span></li>
+    </ul>
+  </section>
+
   <!-- CONTACT -->
   <section class="content-section" id="contact" aria-labelledby="contact-heading">
     <h2 id="contact-heading">Contact</h2>
@@ -176,7 +196,7 @@
     <p class="small"><a href="https://www.math.fsu.edu/~lee/projects.html" target="_blank" rel="noopener">FSU research group</a> · <a href="https://www.math.fsu.edu/" target="_blank" rel="noopener">Department of Mathematics</a></p>
   </section>
 </main>
-<div class="wrap"><footer><span>&copy; 2026 Seungmin Lee · Updated October 26, 2026</span><a href="#home">Back to top</a></footer></div>
+<div class="wrap"><footer><span>&copy; 2026 Seungmin Lee · Updated November 3, 2026</span><a href="#home">Back to top</a></footer></div>
 <script>
   // Clipboard copy includes a manual fallback for local files or unsupported browsers.
   document.querySelector('#copy-citation').addEventListener('click', async () => {
