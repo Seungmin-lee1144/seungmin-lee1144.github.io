@@ -20,7 +20,9 @@
     h2 { font-size:30px; line-height:1.35; margin:0 0 18px; }
     h3 { font-size:20px; line-height:1.5; margin:22px 0 8px; }
     p { margin:0 0 14px; }
-    .intro { padding:42px 0 34px; border-bottom:1px solid var(--line); }
+    .intro { display:flex; align-items:center; justify-content:space-between; gap:32px; padding:42px 0 34px; border-bottom:1px solid var(--line); }
+    .intro-text { min-width:0; }
+    .headshot { display:block; flex:0 0 160px; width:160px; height:160px; object-fit:contain; border-radius:8px; }
     .cv-link { display:inline-block; margin-top:2px; font-size:16px; }
     .role { font-size:18px; margin:0 0 4px; }
     .affiliation,.muted { color:var(--muted); }
@@ -68,7 +70,7 @@
       h1 { font-size:32px; }
       h2 { font-size:27px; }
       .research-list h3 { font-size:22px; }
-      .intro { padding:30px 0; }
+      .intro { flex-direction:column; align-items:flex-start; gap:22px; padding:30px 0; }
     }
     @media print {
       .skip-link,.copy-citation,footer { display:none!important; }
@@ -88,10 +90,13 @@
 <main id="main" class="wrap">
   <!-- INTRODUCTION: update position and affiliation here. -->
   <section class="intro" id="home" aria-labelledby="name">
-    <h1 id="name">Seungmin Lee</h1>
-    <p class="role">Ph.D. student in Applied and Computational Mathematics</p>
-    <p class="affiliation">Department of Mathematics, Florida State University</p>
-    <a class="cv-link" href="LEE_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    <div class="intro-text">
+      <h1 id="name">Seungmin Lee</h1>
+      <p class="role">Ph.D. student in Applied and Computational Mathematics</p>
+      <p class="affiliation">Department of Mathematics, Florida State University</p>
+      <a class="cv-link" href="LEE_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </div>
+    <img class="headshot" src="assets/seungmin-lee-headshot.jpg" width="160" height="160" alt="Seungmin Lee" decoding="async">
   </section>
 
 
